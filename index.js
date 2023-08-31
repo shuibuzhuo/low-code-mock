@@ -1,30 +1,32 @@
-const Koa = require('koa')
-const Router = require('koa-router')
-const mockList = require('./mock/index')
+const Koa = require("koa");
+const Router = require("koa-router");
+const mockList = require("./mock/index");
 
-const app = new Koa()
-const router = new Router()
+const app = new Koa();
+const router = new Router();
+
+const DELAY = 0;
 
 async function getRes(fn, ctx) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(() => {
-      const res = fn(ctx)
-      resolve(res)
-    }, 1000)
-  })
+      const res = fn(ctx);
+      resolve(res);
+    }, DELAY);
+  });
 }
 
-mockList.forEach(item => {
-  const { method, url, response } = item
+mockList.forEach((item) => {
+  const { method, url, response } = item;
 
   router[method](url, async (ctx) => {
-    const res = await getRes(response, ctx)
-    ctx.body = res
-  })
-})
+    const res = await getRes(response, ctx);
+    ctx.body = res;
+  });
+});
 
-app.use(router.routes())
+app.use(router.routes());
 
-app.listen(3001, () => {
-  console.log('app started at port 3001...')
-})
+app.listen(3005, () => {
+  console.log("app started at port 3005...");
+});
