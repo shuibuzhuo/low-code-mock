@@ -1,9 +1,9 @@
 const test = require('./test')
-const question = require('./question')
+const flowDef = require('./flowDef')
 
 const mockList = [
   ...test,
-  ...question
+  ...flowDef
 ]
 
 module.exports = mockList

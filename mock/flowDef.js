@@ -1,13 +1,13 @@
 const Mock = require("mockjs");
-const getQuestionList = require("./data/getQuestionList");
+const getFlowDefList = require("./data/getFlowDefList");
 const getComponentList = require("./data/getComponentList");
 
 const Random = Mock.Random;
 
 module.exports = [
   {
-    // 获取单个问卷信息
-    url: "/api/question/:id",
+    // 获取单个流程定义信息
+    url: "/api/flowDef/:id",
     method: "get",
     response() {
       return {
@@ -15,7 +15,7 @@ module.exports = [
         data: {
           id: Random.id(),
           title: Random.ctitle(),
-          desc: "问卷描述",
+          desc: "流程定义描述",
           css: "",
           js: "",
           isPublished: true,
@@ -26,8 +26,8 @@ module.exports = [
     },
   },
   {
-    // 创建问卷
-    url: "/api/question",
+    // 创建流程定义
+    url: "/api/flowDef",
     method: "post",
     response() {
       return {
@@ -39,8 +39,8 @@ module.exports = [
     },
   },
   {
-    // 获取（查询）问卷列表
-    url: "/api/question",
+    // 获取（查询）流程定义列表
+    url: "/api/flowDef",
     method: "get",
     response(ctx) {
       const { url = "", query = {} } = ctx;
@@ -51,15 +51,15 @@ module.exports = [
       return {
         code: 200,
         data: {
-          list: getQuestionList({ len: pageSize, isDeleted, isStar }),
+          list: getFlowDefList({ len: pageSize, isDeleted, isStar }),
           total: 100,
         },
       };
     },
   },
   {
-    // 更新问卷信息
-    url: "/api/question/:id",
+    // 更新流程定义信息
+    url: "/api/flowDef/:id",
     method: "patch",
     response() {
       return {
@@ -68,8 +68,8 @@ module.exports = [
     },
   },
   {
-    // 复制问卷
-    url: "/api/question/duplicate/:id",
+    // 复制流程定义
+    url: "/api/flowDef/duplicate/:id",
     method: "post",
     response() {
       return {
@@ -82,7 +82,7 @@ module.exports = [
   },
   {
     // 彻底删除
-    url: "/api/question",
+    url: "/api/flowDef",
     method: "delete",
     response() {
       return {

@@ -14,7 +14,7 @@ function getComponentList() {
     // Info
     {
       fe_id: 'c1',
-      type: 'questionInfo',
+      type: 'flowInfo',
       isHidden: false,
       isLocked: false,
       title: '问卷信息',
@@ -23,7 +23,7 @@ function getComponentList() {
     // Title
     {
       fe_id: 'c2',
-      type: 'questionTitle',
+      type: 'flowTitle',
       isHidden: false,
       isLocked: false,
       title: '标题',
@@ -32,7 +32,7 @@ function getComponentList() {
     // Input
     {
       fe_id: 'c3',
-      type: 'questionInput',
+      type: 'flowInput',
       isHidden: false,
       isLocked: false,
       title: '输入框1',
@@ -41,7 +41,7 @@ function getComponentList() {
     // Input
     {
       fe_id: 'c4',
-      type: 'questionInput',
+      type: 'flowInput',
       isHidden: false,
       isLocked: false,
       title: '输入框2',
@@ -50,7 +50,7 @@ function getComponentList() {
     // Textarea
     {
       fe_id: 'c5',
-      type: 'questionTextarea',
+      type: 'flowTextarea',
       isHidden: false,
       isLocked: false,
       title: '段落',
@@ -59,7 +59,7 @@ function getComponentList() {
     // Paragraph
     {
       fe_id: 'c6',
-      type: 'questionParagraph',
+      type: 'flowParagraph',
       isHidden: false,
       isLocked: false,
       title: '段落',
@@ -68,7 +68,7 @@ function getComponentList() {
     // Radio
     {
       fe_id: 'c7',
-      type: 'questionRadio',
+      type: 'flowRadio',
       isHidden: false,
       isLocked: false,
       title: '用户单选',
@@ -86,7 +86,7 @@ function getComponentList() {
     // Checkbox
     {
       fe_id: 'c8',
-      type: 'questionCheckbox',
+      type: 'flowCheckbox',
       isHidden: false,
       isLocked: false,
       title: '用户多选',

@@ -2,7 +2,7 @@ const Mock = require("mockjs");
 
 const Random = Mock.Random
 
-function getQuestionList(opt = {}) {
+function getFlowList(opt = {}) {
   const list = []
   const { len = 10, isDeleted = false, isStar = false } = opt
 
@@ -21,4 +21,4 @@ function getQuestionList(opt = {}) {
   return list
 }
 
-module.exports = getQuestionList
+module.exports = getFlowList
