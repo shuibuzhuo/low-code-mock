@@ -1,15 +1,8 @@
-/*
- * @Author: zhuotuo
- * @Date: 2023-05-09 09:14:29
- * @LastEditors: zhuotuo
- * @LastEditTime: 2023-05-09 19:57:37
- * @Description: 
- */
 const Mock = require('mockjs')
 
 const Random = Mock.Random
 
-function getComponentList() {
+function getComponentsList() {
   return [
     // Info
     {
@@ -103,4 +96,4 @@ function getComponentList() {
   ]
 }
 
-module.exports = getComponentList
+module.exports = getComponentsList

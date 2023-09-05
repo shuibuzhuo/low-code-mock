@@ -1,6 +1,6 @@
 const Mock = require("mockjs");
 const getFlowDefList = require("./data/getFlowDefList");
-const getComponentList = require("./data/getComponentList");
+const getComponentsList = require("./data/getComponentsList");
 
 const Random = Mock.Random;
 
@@ -20,7 +20,7 @@ module.exports = [
           js: "",
           isPublished: true,
           isDeleted: false,
-          componentList: getComponentList(),
+          componentsList: getComponentsList(),
         },
       };
     },
